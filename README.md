@@ -21,23 +21,23 @@ The Raspberry Pi have 2 different SPI bus: one will be known as /dev/spi0.* and 
 
 Enabling SPI1
 
-    if '/dev/spi1.0' and '/dev/spi1.1' are not available, you need to enable SPI1 manually:
+if '/dev/spi1.0' and '/dev/spi1.1' are not available, you need to enable SPI1 manually:
 
-    1. Edit the boot configuration file:
+1. Edit the boot configuration file:
 
         sudo nano /boot/config.txt
 
-    2. Add the following lines at the end of the file to enable SPI1:
+2. Add the following lines at the end of the file to enable SPI1:
 
         dtparam=spi=on
         dtoverlay=spi1-3cs
 
-    3. Save the file and exit the editor (Ctrl + O, Enter, Ctrl + X)
-    4. Reboot your Raspberry Pi to apply the changes:
+3. Save the file and exit the editor (Ctrl + O, Enter, Ctrl + X)
+4. Reboot your Raspberry Pi to apply the changes:
 
         sudo reboot
 
-    After rebooting, you should see '/dev/spi1.0' and '/dev/spi1.1' available for use.
+After rebooting, you should see '/dev/spi1.0' and '/dev/spi1.1' available for use.
 
 
 Communication with MCP23S08
